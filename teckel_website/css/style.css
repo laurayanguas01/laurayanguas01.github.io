@@ -1,0 +1,42 @@
+@import 'https://fonts.googleapis.com/css?family=Didact+Gothic|Open+Sans|Roboto';
+
+* {
+  -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+         box-sizing: border-box;
+  font-family:'Roboto', sans-serif;
+}
+h1, h2, h3, h4 {
+  font-family: 'Didact Gothic', sans-serif;
+}
+.grow {
+ transition: font-size 0.2s;
+}
+.grow:hover {
+  font-size: 114%;
+}
+
+
+
+
+.navbar-default .navbar-nav>li>a {
+  min-height: 80px;
+  color: white;
+  line-height: 50px;
+}
+.navbar-brand img {
+  width:80px;
+  display: inline;
+}
+.navbar-brand h1 {
+  display:inline;
+  color:white;
+  font-size: 1.6em;
+  font-weight: bold;
+}
+.navbar-default {
+  background-color: black;
+}
+.navbar-header {
+  min-height: 80px;
+}
