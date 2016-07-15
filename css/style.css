@@ -40,3 +40,20 @@ h1, h2, h3, h4 {
 .navbar-header {
   min-height: 80px;
 }
+
+/*-------WIENER DOG ANIMATION--------*/
+
+.salchicha {
+  margin-top: 100px;
+
+}
+.salchicha img {
+  margin: 0;
+  padding: 0;
+}
+.stretch {
+  transition: width 2s;
+}
+.stretch:hover {
+  width: 130%;
+}
