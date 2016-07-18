@@ -42,20 +42,34 @@ h1, h2, h3, h4 {
 }
 
 /*-------WIENER DOG ANIMATION--------*/
+.salchicha_container {
+  position: relative;
+}
+.salchicha_text h3{
 
+}
+.salchicha_text {
+  position: absolute;
+left: 311px;
+top: 224px;
+color: white;
+display: inline-flex;
+}
 .salchicha {
   margin-top: 100px;
-
 }
 .salchicha img {
   margin: 0;
   padding: 0;
 }
 .stretch {
-  transition: width 2s;
-  transition-timing-function: cubic-bezier(.25, .1, .25, 1);
+  width: 82px;
+  height: 249px;
+  transition: width 1.4s;
+  -webkit-transition-timing-function: cubic-bezier(0.660, -0.415, 0.270, 1.445);
+    transition-timing-function: cubic-bezier(0.660, -0.415, 0.270, 1.445);
 }
 .stretch:hover {
-  width: 200px;
+  width: 560px;
   height:249px;
 }
