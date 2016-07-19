@@ -1,0 +1,76 @@
+@import 'https://fonts.googleapis.com/css?family=Galada|Open+Sans';
+
+* {
+  -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+         box-sizing: border-box;
+  font-family:'Open Sans', sans-serif;
+}
+.container {
+  width:100%;
+  margin:0 auto;
+}
+h1 {
+  font-family: 'Galada', cursive;
+  text-align: center;
+  color: #831c1c;
+  margin-top: 90px;
+}
+a {
+  color: white;
+  text-decoration: none;
+  transition: font 0.3s ease
+}
+a:hover {
+  font-size: 120%;
+}
+.navbar li {
+  display: inline-block;
+  padding: 20px;
+}
+ul {
+  margin: 0 auto;
+  display: block;
+  width: 600px;
+}
+.navbar {
+  width:100%;
+  background-color: #831c1c;
+  position: fixed;
+  top: 0;
+}
+form {
+  position: relative;
+  background-color: lightpink;
+  padding: 20px;
+}
+.extras {
+  position: absolute;
+  right:0;
+  top:0;
+  width:300px;
+  padding: 20px;
+}
+.datos {
+  width:300px;
+}
+.center {
+  width:600px;
+  margin: 0 auto;
+}
+.datos input {
+  width:200px;
+  border-radius: 3px;
+  border:1px solid grey;
+  height: 30px;
+}
+#submit {
+  position: absolute;
+  right: 20px;
+  bottom:20px;
+  width:100px;
+  height:30px;
+}
+#submit:hover {
+  background-color: #831c1c;
+}
