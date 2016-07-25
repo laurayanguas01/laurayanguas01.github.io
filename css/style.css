@@ -9,13 +9,15 @@
 h1, h2, h3, h4 {
   font-family: 'Didact Gothic', sans-serif;
 }
+html, body, .salchicha {
+  overflow-x: hidden;
+}
 .grow {
   transition: font-size 0.2s;
 }
 .grow:hover {
   font-size: 114%;
 }
-
 .navbar-default .navbar-nav>li>a {
   min-height: 80px;
   color: white;
@@ -37,44 +39,77 @@ h1, h2, h3, h4 {
 .navbar-header {
   min-height: 80px;
 }
+.hero {
+  background: orange;
+  height: 500px;
+}
+
+
+
+
 
 /*-------WIENER DOG ANIMATION--------*/
+
+
 .salchicha_container {
   position: relative;
-  width: 930px;
+  width: 100%;
+  margin-top: 20px;
 }
 /*.fondo {
-  background: url(http://a.fastcompany.net/multisite_files/codesign/imagecache/1280/poster/2013/02/1671964-poster-1280-black-swan-technology-timeline.jpg
+background: url(http://a.fastcompany.net/multisite_files/codesign/imagecache/1280/poster/2013/02/1671964-poster-1280-black-swan-technology-timeline.jpg
 ) no-repeat center center fixed;
 -webkit-background-size: cover;
 -moz-background-size: cover;
 -o-background-size: cover;
 background-size: cover;
 }*/
+
 .salchicha_text h3{
   font-size: 30px;
 }
 .salchicha_text {
   position: absolute;
-  left: 315px;
-  top: 222px;
+  left: 306px;
+  top: 122px;
   color: white;
 }
 .salchicha {
-  margin-top: 100px;
+  position: absolute;
+  left: 41%;
+  overflow: hidden;
+  width: 100%;
+  white-space: nowrap;
+}
+.salchicha2 {
+  position: absolute;
+  left:-1250px;
+  top:230px;
+  white-space: nowrap;
+}
+.salchicha3 {
+  position: absolute;
+  left:-3000px;
+  top:460px;
+  white-space: nowrap;
 }
 .salchicha img {
   margin: 0;
   padding: 0;
 }
-.stretch {
+.stretch, .stretch2, .stretch3 {
   width: 82px;
   height: 249px;
-  transition: width 1.4s;
-  -webkit-transition-timing-function: cubic-bezier(0.660, -0.415, 0.270, 1.445);
-  transition-timing-function: cubic-bezier(0.660, -0.415, 0.270, 1.445);
 }
-.stretch:hover {
-  width: 560px;
-  height:249px;
+/*.stretch:hover {
+width: 300px;
+height: 249px
+}*/
+
+
+
+
+
+footer {
+  height: 1000px;
 }

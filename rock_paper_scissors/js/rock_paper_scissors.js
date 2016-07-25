@@ -44,66 +44,34 @@ var userPoints = 0;
 var numLoops = 3;
 
 //FOR LOOP --> lo que pasa antes, durante cuanto y lo que pasa despues. antes declaramos la var i=0,
-//la funcion va a correr mientras i sea menor a numLoops, y cada vez que termina se agrega un numero a i.
-do {
-  for (var i = 0; i < numLoops; i++) {
-    var usersThrow = prompt ("Rock, paper or scissors?");
+//la funcion va a correr mientras i sea menor a numLoops, y cada vez que termina se agrega un numero a i
+
+
+
+// $( "div.demo-container" ).text()
+
+
+$(document).ready(function() {
+  $('.btn').click(function() {
+    var usersThrow = $(this).attr("value");
+    console.log(usersThrow);
     if (usersThrow === pcThrow) {
+      $('.' + usersThrow + "1").slideDown("slow");
+      $('.' + pcThrow + "2").slideDown("slow");
       alert ("The computer also throws " + usersThrow + ". It's a tie!");
       pcPoints = (pcPoints + 1);
       userPoints = (userPoints + 1);
     } else if (pcThrow === "scissors" && usersThrow === "paper" || pcThrow === "rock" && usersThrow === "scissors" || pcThrow === "paper" && usersThrow === "rock" ) {
       alert ("The computer throws " + pcThrow + ". You loose the toss!");
+      $('.' + usersThrow + "1").slideDown("slow");
+      $('.' + pcThrow + "2").slideDown("slow");
       pcPoints = (pcPoints + 1);
     } else if (pcThrow === "scissors" && usersThrow === "rock" || pcThrow === "rock" && usersThrow === "paper" || pcThrow === "paper" && usersThrow === "scissors" ) {
       alert ("The computer throws " + pcThrow + ". You win the toss!");
+      $('.' + usersThrow + "1").slideDown("slow");
+      $('.' + pcThrow + "2").slideDown("slow");
       userPoints = (userPoints + 1);
     }
     alert ("Points: Computer - " + pcPoints + " You - " + userPoints);
-  }
-} while (confirm("Would you like to play again?"));
-//
-// if (usersThrow === pcThrow === 1) {
-//   alert ("The computer also throws rock. It's a tie! Try again...");
-// } else if (usersThrow === "paper" && pcThrow === 2) {
-//     alert ("The computer also throws paper. It's a tie! Try again...");
-//   } else if (usersThrow === "scissors" && pcThrow === 3) {
-//       alert ("The computer also throws scissors. It's a tie! Try again...");
-//     }
-//
-//     if (usersThrow === "Rock" && pcThrow === 2) {
-//       alert ("The computer also throws rock. It's a tie! Try again...");
-//     } else if (usersThrow === "paper" && pcThrow === 2) {
-//         alert ("The computer also throws paper. It's a tie! Try again...");
-//       } else if (usersThrow === "scissors" && pcThrow === 3) {
-//           alert ("The computer also throws scissors. It's a tie! Try again...");
-//         }
-//
-//
-//
-// if (pcThrow === 1) {
-//   alert("The computer throws rock!");
-// }
-// if (pcThrow === 2) {
-//   alert("paper");
-// }
-// if (pcThrow === 3) {
-//   alert("scissors");
-// }
-//
-// //
-// // if usersChoice === pcChoice
-// //
-// /
-// // alert("The computer chose " +   + "You loose!" )
-// // else alert("The computer chose " +    + "You Win!" )
-// //
-// // if (password.length > 5 && password.length < 8) {
-// //   alert("Your password is barely accepted.");
-// // } else if (password.length > 7 && password.length < 10) {
-// //   alert("Your password is moderate.");
-// // } else if (password.length > 9) {
-// //   alert("Your password is awesome!");
-// // } else {
-// //   alert("You must enter something.");
-// // }
+  });
+ });
