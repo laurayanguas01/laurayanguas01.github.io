@@ -89,6 +89,7 @@ $(function() {
     }
     console.log(position);
     $(".stretch").width(position);
+    $(".live").animate({left: '200px'});
   });
 });
 
@@ -120,11 +121,18 @@ $(function() {
     }
     else  {
         position3 = 0 + 5.0 * position3;
+
+
     }
     console.log(position3);
     $(".stretch3").width(position3);
   });
 });
+
+
+
+// BBBBRRREEEEAAAAKKKK STATEMENT
+
 
 
 

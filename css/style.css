@@ -9,7 +9,7 @@
 h1, h2, h3, h4 {
   font-family: 'Didact Gothic', sans-serif;
 }
-html, body, .salchicha {
+html, body, .salchicha, .heroizq {
   overflow-x: hidden;
 }
 .grow {
@@ -18,10 +18,17 @@ html, body, .salchicha {
 .grow:hover {
   font-size: 114%;
 }
+.navbar-default {
+  border: 0px;
+}
 .navbar-default .navbar-nav>li>a {
   min-height: 80px;
-  color: white;
+  color: black;
   line-height: 50px;
+}
+.navbar-default .navbar-nav>.active>a {
+  color: black;
+  background-color: transparent;
 }
 .navbar-brand img {
   width:80px;
@@ -29,20 +36,31 @@ html, body, .salchicha {
 }
 .navbar-brand h1 {
   display:inline;
-  color:white;
+  color:black;
   font-size: 1.6em;
   font-weight: bold;
 }
 .navbar-default {
-  background-color: black;
+  background-color: transparent;
 }
 .navbar-header {
   min-height: 80px;
 }
-.hero {
-  background: orange;
-  height: 500px;
+.heroder{
+  background: #f6df34;
+  height: 1500px;
+  width: 50%;
+  float: left;
 }
+.heroizq {
+  background: #c61ccc;
+  position: relative;
+  height: 1500px;
+  width: 50%;
+  float: left;
+}
+
+
 
 
 
@@ -50,21 +68,29 @@ html, body, .salchicha {
 
 /*-------WIENER DOG ANIMATION--------*/
 
+.words {
+  position: absolute;
+}
+.words img {
+
+}
+.live {
+  left:730px;
+}
+.design {
+  left:730px;
+}
+
+.fondo {
+  position: relative;
+}
 
 .salchicha_container {
+  top: 270px;
   position: relative;
   width: 100%;
   margin-top: 20px;
 }
-/*.fondo {
-background: url(http://a.fastcompany.net/multisite_files/codesign/imagecache/1280/poster/2013/02/1671964-poster-1280-black-swan-technology-timeline.jpg
-) no-repeat center center fixed;
--webkit-background-size: cover;
--moz-background-size: cover;
--o-background-size: cover;
-background-size: cover;
-}*/
-
 .salchicha_text h3{
   font-size: 30px;
 }
@@ -98,7 +124,7 @@ background-size: cover;
   padding: 0;
 }
 .stretch, .stretch2, .stretch3 {
-  width: 82px;
+  min-width: 82px;
   height: 249px;
 }
 /*.stretch:hover {
@@ -111,5 +137,5 @@ height: 249px
 
 
 footer {
-  height: 1000px;
+  height: 2000px;
 }
