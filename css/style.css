@@ -65,7 +65,7 @@ html, body, .salchicha, .heroizq {
 .navbar-default.active {
   background-color: black;
 }
-.navbar-default .navbar-nav>li>a.active2,  .navbar-default .navbar-nav>.active>a.active2 {
+.navbar-default .navbar-nav>li>a.active2,  .navbar-default .navbar-nav>.active>a.active2, .navbar-brand h1.active2 {
   color:white;
 }
 
@@ -91,16 +91,23 @@ html, body, .salchicha, .heroizq {
 .words img {
   width: 325px;
 }
-.live {
+.long {
   left:730px;
   top:535px;
 }
-.design {
+.live {
   left:730px;
   top:758px;
 }
+.design {
+  left:730px ;
+  top: 988px;
+}
+.long img {
+  width:441px;
+}
 .live img {
-  width: 325px;
+  width: 345px;
 }
 .design img {
   width: 625px;
@@ -142,6 +149,12 @@ html, body, .salchicha, .heroizq {
   top:460px;
   white-space: nowrap;
 }
+.salchicha4 {
+  position: absolute;
+  left:-4250px;
+  top:690px;
+  white-space: nowrap;
+}
 .salchicha img {
   margin: 0;
   padding: 0;
@@ -156,9 +169,14 @@ height: 249px
 }*/
 
 
-
+.lorem {
+  position:absolute;
+  padding: 6%;
+  top: 896px;
+}
 
 
 footer {
-  height: 2000px;
+  height: 1700px;
+      background-color: black;
 }

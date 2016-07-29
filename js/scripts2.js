@@ -11,6 +11,48 @@
 
 
 
+ULTIMOOOO
+ar fullWidth = ($(window).width());
+
+$(function() {
+  var lastScrollTop = 0;
+
+  $(window).on("resize scroll",function(e){
+    var max = ($(window).width() / 2 - $(".long").width() + 15);
+    var currLeft = parseInt($(".long").css("left"));
+    var position = $(this).scrollTop();
+    var move = currLeft-position/2;
+
+    if (window.scrollTop < 0) {
+      position = 0;
+    }
+    else if (position < fullWidth)  {
+      position = 10 * position;
+    }
+    $(".stretch").width(position);
+
+    if (position > lastScrollTop && currLeft > max) { // scroll down
+      $(".long").css({left:+move});
+    }
+    // else if (position < lastScrollTop && currLeft < 730 ) { // scroll up
+    //   console.log("currLeft: " + currLeft);
+    //   $(".live").css({left:-move});
+    // }
+    lastScrollTop = position;
+  });
+
+});
+
+
+
+
+
+
+
+
+
+
+
 // $(function() {
 //
 //     $('.stretch').css({

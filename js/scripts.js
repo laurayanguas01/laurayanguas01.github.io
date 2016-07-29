@@ -7,15 +7,22 @@
 $(window).on("scroll", function() {
     if($(window).scrollTop() > 0) {
         $(".navbar-default").addClass("active");
+        $(".navbar-brand h1").addClass("active2");
         $(".navbar-default .navbar-nav>li>a").addClass("active2");
         $(".navbar-default .navbar-nav>.active>a").addClass("active2");
+        $(".navbar-default img").attr('src', 'img/logo_blanco.png');
+
     } else {
         //sacar la background property para que sea transparent again (defined in css)
        $(".navbar-default").removeClass("active");
+       $(".navbar-brand h1").removeClass("active2");
        $(".navbar-default .navbar-nav>li>a").removeClass("active2");
        $(".navbar-default .navbar-nav>.active>a").removeClass("active2");
+       $(".navbar-default img").attr('src', 'img/logo_negro.png');
+
     }
 });
+
 
 //------------------------------------------------------ WIENER DOG / LONG LIVE DESIGN ANIMATION:
 
@@ -25,8 +32,8 @@ $(function() {
   var lastScrollTop = 0;
 
   $(window).on("resize scroll",function(e){
-    var max = ($(window).width() / 2 - $(".live").width() + 15);
-    var currLeft = parseInt($(".live").css("left"));
+    var max = ($(window).width() / 2 - $(".long").width() + 15);
+    var currLeft = parseInt($(".long").css("left"));
     var position = $(this).scrollTop();
     var move = currLeft-position/2;
 
@@ -38,43 +45,20 @@ $(function() {
     }
     $(".stretch").width(position);
 
-    // // console.log("fullwidth: " + fullWidth);
-    // console.log("X-------->: " + currLeft);
-    // console.log("MAX----------> " + max);
-    // // console.log("last scroll top -------" + lastScrollTop);
-    // // console.log("position--------" + position);
-    // console.log("moveeeeeeeeeeeee " + move);
-    // // console.log("x------>" + x);
 
     if (position > lastScrollTop && currLeft > max) { // scroll down
-      $(".live").css({left:+move});
-    }
-    else if (position < lastScrollTop && currLeft < 730 ) { // scroll up
-      console.log("currLeft: " + currLeft);
-      $(".live").css({left:-move});
+      $(".long").css({left:+move});
     }
     lastScrollTop = position;
   });
-
 });
-
-
-
-
-
-
-
-
-
-
-
 
 
 $(function() {
 
   $(window).on("resize scroll",function(e){
-    var maximo2 = ($(window).width() / 2 - $(".design").width() + 15);
-    var x2 = $('.design').offset().left;
+    var maximo2 = ($(window).width() / 2 - $(".live").width() + 15);
+    var x2 = $('.live').offset().left;
     var position2 = 0;
     position2 = $(this).scrollTop();
 
@@ -86,35 +70,31 @@ $(function() {
     }
     $(".stretch2").width(position2);
 
-    // console.log("fullwidth: " + fullWidth);
-    // console.log("X2-------->: " + x2);
-    // console.log("MAXIMO2----------> " + maximo2);
 
     if (position2 > 2820 && x2 > maximo2) {
-      $(".design").css({left:2530-position2/2});
+      $(".live").css({left:2530-position2/2});
     }
-
-
-
-
   });
 });
 
 
-var fullWidth = ($(window).width() /2);
-var position3 = 0;
 $(function() {
-  $(window).scroll(function() {
+
+  $(window).on("resize scroll",function(e){
+    var maximo3 = ($(window).width() / 2 - $(".design").width() + 15);
+    var x3 = $('.design').offset().left;
+    var position3 = 0;
     position3 = $(this).scrollTop();
+
     if (window.scrollTop < 50) {
       position3 = 0 - 0 * position3;
     }
-    else  {
-      position3 = 0 + 12.0 * position3;
-
-
+    else if (position3 < fullWidth)  {
+      position3 = 0 + 10.0 * position3;
     }
-    console.log(position3);
     $(".stretch3").width(position3);
+    if (position3 > 2820 && x3 > maximo3) {
+      $(".design").css({left:3530-position3/2});
+    }
   });
 });
