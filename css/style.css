@@ -1,11 +1,5 @@
 @import 'https://fonts.googleapis.com/css?family=Didact+Gothic|Open+Sans|Roboto';
 
-
-
-
-
-
-
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -19,7 +13,42 @@ html, body, .salchicha, .heroizq {
   overflow-x: hidden;
 }
 
+/*--------------------------PROJECTS MODAL------------------------*/
 
+
+
+.projects {
+  background-color: black;
+  padding: 7%;
+}
+.projects button {
+  margin-top: 8%;
+}
+.modal-dialog {
+  width:60%;
+}
+.modal-content {
+  position: relative;
+    background-color: #ffe500;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 0;
+    border: 0;
+    border-radius: 3px;
+    outline: 0;
+    -webkit-box-shadow: 0 3px 9px rgba(0,0,0,.5);
+    box-shadow: 0 3px 9px rgba(0,0,0,.5);
+}
+.modal-content img {
+  width: 100%;
+}
+
+
+.modal-footer, .modal-header {
+  border:0px;
+}
+
+/*--------------------------NAVBAR------------------------*/
 
 
 
@@ -176,7 +205,8 @@ height: 249px
 }
 
 
+
 footer {
-  height: 1700px;
+  height: 600px;
       background-color: black;
 }

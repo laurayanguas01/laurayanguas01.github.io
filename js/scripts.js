@@ -1,6 +1,27 @@
 
 
 
+
+
+//------------------------------------------------------ ANCHOR LINKS ANIMATION:
+
+
+$(function() {
+  $('a[href*="#"]:not([href="#"])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
+  });
+});
+
+
 //------------------------------------------------------ NAVBAR:
 
 
@@ -30,7 +51,6 @@ var fullWidth = ($(window).width());
 
 $(function() {
   var lastScrollTop = 0;
-
   $(window).on("resize scroll",function(e){
     var max = ($(window).width() / 2 - $(".long").width() + 15);
     var currLeft = parseInt($(".long").css("left"));
@@ -55,7 +75,6 @@ $(function() {
 
 
 $(function() {
-
   $(window).on("resize scroll",function(e){
     var maximo2 = ($(window).width() / 2 - $(".live").width() + 15);
     var x2 = $('.live').offset().left;
@@ -79,7 +98,6 @@ $(function() {
 
 
 $(function() {
-
   $(window).on("resize scroll",function(e){
     var maximo3 = ($(window).width() / 2 - $(".design").width() + 15);
     var x3 = $('.design').offset().left;
