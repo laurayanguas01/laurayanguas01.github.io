@@ -36,10 +36,12 @@ html, body, .salchicha, .heroizq {
   min-height: 80px;
   color: black;
   line-height: 50px;
+  transition: all 0.2s ease-in-out;
 }
 .navbar-default .navbar-nav>.active>a {
   color: black;
   background-color: transparent;
+  transition: all 0.2s ease-in-out;
 }
 .navbar-brand img {
   width:80px;
@@ -52,11 +54,21 @@ html, body, .salchicha, .heroizq {
   font-weight: bold;
 }
 .navbar-default {
-  background-color: black;;
+  background-color: transparent;
+  transition: all 0.4s ease-in-out;
 }
 .navbar-header {
   min-height: 80px;
 }
+
+/*ESTILOS DEL OPACITY JQUERY*/
+.navbar-default.active {
+  background-color: black;
+}
+.navbar-default .navbar-nav>li>a.active2,  .navbar-default .navbar-nav>.active>a.active2 {
+  color:white;
+}
+
 
 /*--------------------------WIENER DOG ANIMATION------------------------*/
 
